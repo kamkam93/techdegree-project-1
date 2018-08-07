@@ -2,7 +2,7 @@
 
 // Create the array of quote objects and name it quotes
 
-
+var quotes = 
 
 // Create the getRandomQuuote function and name it getRandomQuote
 

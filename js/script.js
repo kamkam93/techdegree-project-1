@@ -43,7 +43,9 @@ function getRandomQuote() {
 
 // Create the printQuote funtion and name it printQuote
 
+function printQuote() {
 
+}
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called

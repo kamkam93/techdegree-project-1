@@ -2,7 +2,13 @@
 
 // Create the array of quote objects and name it quotes
 
-var quotes = 
+var quotes = [
+  {
+    quote: "Theatricality and deception, powerful agents to the uninitiated.",
+    source: 'Bane',
+    year: 2012
+  }
+]
 
 // Create the getRandomQuuote function and name it getRandomQuote
 

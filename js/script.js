@@ -39,7 +39,6 @@ var quotes = [ /* Five quotes stored in a function */
 
 function getRandomQuote(array) {
   var RandomQuote = quotes[Math.floor(Math.random()*quotes.length)]; /* Selects random quote from the quotes array.*/
-
   return (RandomQuote); /* Returns the randomly selected quote object. */
 }
 
@@ -47,7 +46,7 @@ function getRandomQuote(array) {
 
 function printQuote() {
   var actualQuote = getRandomQuote(); /* printQuote function calls getRandomQuote */
-  
+  var stringOfQuoteProperties = "<p> quotes.quote + quotes.source + quotes.year </p>"
   document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
 
 }

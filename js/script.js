@@ -2,7 +2,7 @@
 
 // Create the array of quote objects and name it quotes
 
-var quotes = [
+var quotes = [ /* Five quotes stored in a function */
   {
     quote: "Theatricality and deception, powerful agents to the uninitiated.",
     source: 'Bane',
@@ -37,14 +37,16 @@ var quotes = [
 
 // Create the getRandomQuuote function and name it getRandomQuote
 
-function getRandomQuote() {
+function getRandomQuote(array) {
+  var RandomQuote = quotes[Math.floor(Math.random()*quotes.length)]; /* Selects random quote from the quotes array.*/
 
+  return (RandomQuote); /* Returns the randomly selected quote object. */
 }
 
 // Create the printQuote funtion and name it printQuote
 
 function printQuote() {
-
+  getRandomQuote();
 }
 
 // This event listener will respond to "Show another quote" button clicks

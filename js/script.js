@@ -46,7 +46,7 @@ function getRandomQuote(array) {
 
 function printQuote() {
   var actualQuote = getRandomQuote(); /* printQuote function calls getRandomQuote */
-  var stringOfQuoteProperties = "<p> quotes.quote + quotes.source + quotes.year </p>"
+  var stringOfQuoteProperties = "<p> actualQuote.quote + actualQuote.source + actualQuote.year </p>"
   document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
 
 }

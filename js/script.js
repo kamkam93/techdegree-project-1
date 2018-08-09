@@ -46,7 +46,8 @@ function getRandomQuote(array) {
 // Create the printQuote funtion and name it printQuote
 
 function printQuote() {
-  getRandomQuote(); /* printQuote function calls getRandomQuote */
+  var actualQuote = getRandomQuote(); /* printQuote function calls getRandomQuote */
+  
 }
 
 // This event listener will respond to "Show another quote" button clicks

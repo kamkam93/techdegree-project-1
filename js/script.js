@@ -47,7 +47,9 @@ function getRandomQuote(array) {
 
 function printQuote() {
   var actualQuote = getRandomQuote(); /* printQuote function calls getRandomQuote */
-  
+
+  document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
+
 }
 
 // This event listener will respond to "Show another quote" button clicks

@@ -1,5 +1,4 @@
 // FSJS - Random Quote Generator
-
 // Create the array of quote objects and name it quotes
 
 var quotes = [ /* Five quotes stored in a function */
@@ -51,11 +50,10 @@ function printQuote() {
   if (actualQuote.year.hasOwnProperty()) {
     stringOfQuoteProperties += "<span class="year"> actualQuote.year </span>";
   } else {} /* adds year property of quote, if there is one */
+}
 
   document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
 
-}
-
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote(), false);

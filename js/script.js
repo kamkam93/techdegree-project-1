@@ -48,7 +48,7 @@ function getRandomQuote(array) {
 
 function printQuote() {
   var actualQuote = getRandomQuote(quotes); /* printQuote function calls getRandomQuote */
-  stringOfQuoteProperties += `<p class='quote'> ${actualQuote.quote} </p> + <p class='source'> ${actualQuote.source} </p>`          /* html markup */
+  stringOfQuoteProperties += `<p class='quote'> ${actualQuote.quote} </p> <p class='source'> ${actualQuote.source} </p>`          /* html markup */
   if (actualQuote.hasOwnProperty('year')) {   /* checks Quotes for a quote with year property */
     stringOfQuoteProperties += `<span class='year'> ${actualQuote.year} </span>`;
   } else {

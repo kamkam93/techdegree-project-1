@@ -1,7 +1,4 @@
 // FSJS - Random Quote Generator
-
-var stringOfQuoteProperties = "";
-
 // Create the array of quote objects and name it quotes
 
 var quotes = [ /* Five quotes stored in a function */

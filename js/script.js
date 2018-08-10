@@ -53,10 +53,11 @@ function printQuote() {
     stringOfQuoteProperties += `<span class='year'> ${actualQuote.year} </span>`;
   } else {
     } /* adds year property of quote, if there is one */
+
+document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
 }
 
-  document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote(), false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);

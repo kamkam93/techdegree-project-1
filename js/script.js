@@ -1,4 +1,7 @@
 // FSJS - Random Quote Generator
+
+var stringOfQuoteProperties = "";
+
 // Create the array of quote objects and name it quotes
 
 var quotes = [ /* Five quotes stored in a function */
@@ -45,7 +48,7 @@ function getRandomQuote(array) {
 
 function printQuote() {
   var actualQuote = getRandomQuote(quotes); /* printQuote function calls getRandomQuote */
-  var stringOfQuoteProperties = "<p class=`quote`> actualQuote.quote </p> + <p class=`source`> actualQuote.source + actualQuote.year </p>" /* html markup */
+  stringOfQuoteProperties += "<p class=`quote`> actualQuote.quote </p> + <p class=`source`> actualQuote.source + actualQuote.year </p>" /* html markup */
   if (actualQuote.hasOwnProperty(`year`)) { /* checks Quotes for a quote with year property */
     stringOfQuoteProperties += "<span class="year"> actualQuote.year </span>";
   } else {

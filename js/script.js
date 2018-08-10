@@ -50,7 +50,7 @@ function printQuote() {
     stringOfQuoteProperties += "<p class="quote"> actualQuote.quote </p> + <p class="source"> actualQuote.source + actualQuote.year </p>"
   if (actualQuote.year) {
     stringOfQuoteProperties += "<span class="year"> actualQuote.year </span>";
-  } else {}
+  } else {} /* adds year property of quote, if there is one */
 
   document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
 

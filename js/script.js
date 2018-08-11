@@ -1,7 +1,7 @@
 // FSJS - Random Quote Generator
 // Create the array of quote objects and name it quotes
 
-var quotes = [ /* Five quotes stored in a function */
+var quotes = [ /* Five quotes stored in a array */
   {
     quote: "Theatricality and deception, powerful agents to the uninitiated.",
     source: 'Bane',
@@ -31,6 +31,11 @@ var quotes = [ /* Five quotes stored in a function */
     quote: "I'm going to make him an offer he can't refuse.",
     source: 'The Godfather',
     year: 1972
+  },
+  {
+    quote: "You'll be playing ball in Pelacan Bay when I'm threw with yah.",
+    source: 'Alonzo Harris',
+    year: 2001
   }
 ];
 
@@ -45,7 +50,7 @@ function getRandomQuote(array) {
 
 function printQuote() {
   var actualQuote = getRandomQuote(quotes); /* printQuote function calls getRandomQuote */
-  stringOfQuoteProperties += `<p class='quote'> ${actualQuote.quote} </p> <p class='source'> ${actualQuote.source} </p>`          /* html markup */
+  var stringOfQuoteProperties = `<p class='quote'> ${actualQuote.quote} </p> <p class='source'> ${actualQuote.source} </p>`          /* html markup */
   if (actualQuote.hasOwnProperty('year')) {   /* checks Quotes for a quote with year property */
     stringOfQuoteProperties += `<span class='year'> ${actualQuote.year} </span>`;
   } else {
@@ -54,6 +59,10 @@ function printQuote() {
 document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
 }
 
+// randomColor function
+function getRandomColor() {
+  var RandomColor =
+}
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called

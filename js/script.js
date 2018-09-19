@@ -1,69 +1,53 @@
 // FSJS - Random Quote Generator
+var html= "" ;
 // Create the array of quote objects and name it quotes
-
-var quotes = [ /* Five quotes stored in a array */
+var quotes = [
   {
-    quote: "Theatricality and deception, powerful agents to the uninitiated.",
-    source: 'Bane',
-    year: 2012
-  },
-  {
-    quote: "No, I am your father.",
-    source: 'Darth Vader',
-    year: 1980
-  },
-  {
-    quote: "Yes we can.",
-    source: 'Barack Obama',
-    year: 2008
-  },
-  {
-    quote: "Dude, what do you know about Romona Flowers?",
-    source: 'Scott Pilgrim',
-    year: 2010
-  },
-  {
-    quote: "Just keep swimming. Just keep swimming. Just keep swimming, swimming, swimming. What do we do? We swim, swim.",
-    source: 'Dory',
-    year: 2003
-  },
-  {
-    quote: "I'm going to make him an offer he can't refuse.",
-    source: 'The Godfather',
-    year: 1972
-  },
-  {
-    quote: "You'll be playing ball in Pelacan Bay when I'm threw with yah.",
-    source: 'Alonzo Harris',
-    year: 2001
-  }
+"quoteText": "Decision is a risk rooted in the courage of being free.",
+"quoteAuthor": "Paul Tillich"
+}, {
+"quoteText": "There are basically two types of people. People who accomplish things, and people who claim to have accomplished things. The first group is less crowded.",
+"quoteAuthor": "Mark Twain"
+}, {
+"quoteText": "The things that one most wants to do are the things that are probably most worth doing.",
+"quoteAuthor": "Winifred Holtby"
+}, {
+"quoteText": "Always bear in mind that your own resolution to succeed is more important than any one thing.",
+"quoteAuthor": "Abraham Lincoln"
+}, {
+"quoteText": "Think as a wise man but communicate in the language of the people.",
+"quoteAuthor": "William Yeats"
+}, {
+"quoteText": "He who obtains has little. He who scatters has much.",
+"quoteAuthor": "Lao Tzu"
+}, {
+"quoteText": "On every thorn, delightful wisdom grows, In every rill a sweet instruction flows.",
+"quoteAuthor": "Edward Young"
+}, {
+"quoteText": "Life is like a sewer. What you get out of it depends on what you put into it.",
+"quoteAuthor": "Tom Lehrer"
+}
 ];
 
-// getRandomQuuote function
 
-function getRandomQuote(array) {
-  var RandomQuote = quotes[Math.floor(Math.random()*quotes.length)]; /* Selects random quote from the quotes array.*/
-  return (RandomQuote); /* Returns the randomly selected quote object. */
+
+// Create the getRandomQuuote function and name it getRandomQuote
+function getRandomQuote(arr) {
+  var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  return (randomQuote);
 }
 
-// printQuote funtion
+// Create the printQuote funtion and name it printQuote
 
 function printQuote() {
-  var actualQuote = getRandomQuote(quotes); /* printQuote function calls getRandomQuote */
-  var stringOfQuoteProperties = `<p class='quote'> ${actualQuote.quote} </p> <p class='source'> ${actualQuote.source} </p>`          /* html markup */
-  if (actualQuote.hasOwnProperty('year')) {   /* checks Quotes for a quote with year property */
-    stringOfQuoteProperties += `<span class='year'> ${actualQuote.year} </span>`;
-  } else {
-    } /* adds year property of quote, if there is one */
-
-document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
-}
-
-// randomColor function
-function getRandomColor() {
-  var RandomColor =
+  var selectedQuote = getRandomQuote(quotes);
+  var html =  `<p class="quote"> ${selectedQuote.quoteText}</p>
+<p class="source">${selectedQuote.quoteAuthor}</p>`;
+document.getElementById('quote-box').innerHTML = html;
 }
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+// FSJS - Random Quote Generator
